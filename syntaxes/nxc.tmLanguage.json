@@ -1,0 +1,49 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "nxc",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "source.c"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.nxc",
+                    "match": "\\b(if|while|for|return|task)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.nxc",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.nxc",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "paren-expression": {
+            "begin": "\\(",
+            "end": "\\)",
+            "beginCaptures": {
+                "0": { "name": "punctuation.paren.open" }
+            },
+            "endCaptures": {
+                "0": { "name": "punctuation.paren.close" }
+            },
+            "name": "expression.group",
+            "patterns": [{ "include": "#expression" }]
+        }
+    },
+    "scopeName": "source.nxc"
+}

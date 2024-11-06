@@ -1,0 +1,25 @@
+{
+  "name": "nxc-syntax-highlighting",
+  "displayName": "nxc-syntax-highlighting",
+  "description": "Syntax highlighting for .nxc files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "nxc",
+      "aliases": ["nxc", "nxc"],
+      "extensions": [".nxc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "nxc",
+      "scopeName": "source.nxc",
+      "path": "./syntaxes/nxc.tmLanguage.json"
+    }]
+  }
+}
