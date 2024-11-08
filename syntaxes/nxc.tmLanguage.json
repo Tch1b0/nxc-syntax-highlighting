@@ -17,7 +17,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.nxc",
-                    "match": "\\b(if|while|for|return|task)\\b"
+                    "match": "\\b(if|while|for|return|task|mutex|start|stop|priority|safecall|repeat|until|byte|sub)\\b"
                 }
             ]
         },
